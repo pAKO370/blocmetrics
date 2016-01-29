@@ -33,3 +33,5 @@ gem 'bootstrap-sass'
 gem 'devise'
 #for Enviroment variables
 gem 'figaro', '1.0'
+#for seeds
+gem 'faker'
