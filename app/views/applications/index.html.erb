@@ -1,0 +1,15 @@
+<br>
+<h1><%="Registered Applications for #{@user.email} "%></h1>
+<br>
+<% @applications.each do |app| %>
+ <div class="media">
+    <div class="media-body">
+      <h4 class="media-heading">
+          <%= link_to "#{app.name}",app,class: 'h3' %>    
+      </h4>
+    </div>
+  </div>
+<% end %>
+<br>
+<br>
+<%= link_to "Register New Application", new_application_path,class: 'btn btn-success'%>
