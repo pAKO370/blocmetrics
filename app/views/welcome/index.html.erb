@@ -1,2 +1,11 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<br>
+<div style="background: light gray !important" class="jumbotron">
+  <h1 class="h1">Blocmetrics</h1>
+    <p>Track Your Websites!</p>
+      <div>
+        <% if user_signed_in? %>
+        <% else %>
+          <%= link_to "Sign Up", new_user_registration_path, :class => 'btn btn-info btn-large' %>
+        <%end%>
+      </div>
+</div>
