@@ -1,9 +1,7 @@
 <h1><%="Registered Application: #{@application.name} "%> </h1>
 <br>
 <h3><%="Application URL: #{@application.url}"%></h3>
-  <% @events.each do |event| %>
-    <h4><%="Event name: #{event.name}" %></h4>
-  <% end %>
+    <h4><%= @events %></h4> 
 <h5><%="# of events: #{@events.count}" %></h5>
 
 <%= link_to "Edit", edit_application_path(id: @application.id),class: 'btn btn-primary' %>

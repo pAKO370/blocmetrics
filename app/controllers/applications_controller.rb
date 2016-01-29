@@ -6,12 +6,11 @@ class ApplicationsController < ApplicationController
 
   def show
     @application = Application.find(params[:id])
-    @events = @application.events
+    @events = @application.events.group_by(&:name)
   end
 
   def new
-    @application = Application.new
-    
+    @application = Application.new 
   end
 
   def create
