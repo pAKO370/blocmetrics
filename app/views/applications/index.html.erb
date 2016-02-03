@@ -1,7 +1,9 @@
-<br>
+
 <h1><%="Registered Applications for #{@user.email} "%></h1>
 <br>
-<%= render @applications %>
-<br>
-<br>
 <%= link_to "Register New Application", new_application_path,class: 'btn btn-success'%>
+<br>
+<br>
+<%= render @applications %>
+
+
