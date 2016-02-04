@@ -2,7 +2,7 @@
 <br>
 <h3><%="Application URL: #{@application.url}"%></h3>
     <h4><%= @events %></h4> 
-<h5><%="# of events: #{@events.count}" %></h5>
-
+ <%= pie_chart @application.events.group(:name).count %>
+<%= line_chart @application.events.group_by_day(:created_at).count %>
 <%= link_to "Edit", edit_application_path(id: @application.id),class: 'btn btn-primary' %>
 <%= link_to "Delete", application_path(id: @application.id), method: :delete, class: 'btn btn-danger' %>
